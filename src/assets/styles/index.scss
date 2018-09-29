@@ -2,6 +2,7 @@
   src: url('/static/Fonts/OpenSans-Regular.ttf');
   font-family: "Open Sans";
 }
+
 @font-face {
   src: url('/static/Fonts/OpenSans-Bold.ttf');
   font-family: "Open Sans";
@@ -13,8 +14,63 @@ body {
   background: #101114;
 }
 
-*{
+* {
   font-family: 'Open Sans';
 }
 
+.wrapper {
+  width: 700px;
+  margin: 0 auto;
+  background: #191C24;
 
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+}
+
+.content {
+  width: 60%;
+  background: white;
+  padding: 50px 0 0;
+  float: left;
+
+  &-wrapper {
+    padding: 0 30px;
+  }
+}
+
+.sidebar {
+  float: left;
+  width: 40%;
+
+  &__logo {
+    padding: 60px 0;
+    text-align: center;
+    background: black;
+
+    img {
+      width: 100px;
+    }
+  }
+
+  &__links-block {
+    padding: 30px 0;
+
+    &__item {
+      padding: 12px 30px;
+      color: white;
+      display: block;
+      text-decoration: none;
+      &:hover {
+        background: #1F2229;
+      }
+      &_active {
+        background: #2A2D37;
+
+      }
+    }
+  }
+}

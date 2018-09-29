@@ -166,7 +166,7 @@
           if (pattern.test(this.holder) && this.holder.length >= 4) {
             this.holderClassName = 'payment-form__input_success'
           } else {
-            this.holderClassName = 'payment-form__input_error'
+            this.holderClassName = 'payment-form__input_error';
             this.haveError = true
           }
         })
@@ -178,19 +178,18 @@
           if (pattern.test(this.CVC) && this.CVC.length === 3) {
             this.CVCClassName = 'payment-form__input_success'
           } else {
-            this.CVCClassName = 'payment-form__input_error'
+            this.CVCClassName = 'payment-form__input_error';
             this.haveError = true
           }
         })
       },
       submit() {
-        this.haveError = false
+        this.haveError = false;
         this.cardParts.forEach((part, index) => {
           this.validateCardNumber(index)
-        })
-        this.validateCVC()
-        this.validateHolder()
-        console.log(this.haveError)
+        });
+        this.validateCVC();
+        this.validateHolder();
         if(this.haveError){
           alert('Заполните необходимые поля')
         } else {

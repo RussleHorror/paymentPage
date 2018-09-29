@@ -1,35 +1,18 @@
 <template>
+
   <div class="payment-page">
-    <div class="payment-page__sidebar">
-      <div class="payment-page__sidebar__logo">
-        <img src="/static/Logo.png" alt="">
-      </div>
-      <div class="payment-page__sidebar__links-block">
-        <router-link v-for="link in links" :to="link.to"
-                     class="payment-page__sidebar__links-block__item"
-                     :class="{'payment-page__sidebar__links-block__item_active': link.active}">
-          {{link.label}}
-        </router-link>
-      </div>
+
+    <h1 class="payment-page__content__title">
+      Заголовок страницы
+    </h1>
+    <div class="payment-page__content__sub-text">
+      Давно выяснено, что при оценке дизайна и
+      композиции читаемый текст мешает
     </div>
-
-    <div class="payment-page__content">
-      <div class="payment-page__content-wrapper">
-        <h1 class="payment-page__content__title">
-          Заголовок страницы
-        </h1>
-        <div class="payment-page__content__sub-text">
-          Давно выяснено, что при оценке дизайна и
-          композиции читаемый текст мешает
-        </div>
-        <payment-form></payment-form>
-
-      </div>
-
-
-    </div>
+    <payment-form></payment-form>
 
   </div>
+
 </template>
 
 <script>
@@ -69,15 +52,26 @@
 
 <style lang="scss">
   .payment-page {
-    width: 700px;
-    margin: 0 auto;
-    /*border: 1px solid white;*/
-    background: #191C24;
+    width: 100%;
+    /*background: #191C24;*/
 
     &:after {
       content: '';
       display: block;
       clear: both;
+    }
+
+    &__title {
+      font-size: 28px;
+      font-weight: bold;
+      color: black;
+      margin-bottom: 7px;
+    }
+
+    &__sub-text {
+      color: #676666;
+      font-size: 13px;
+      margin-bottom: 22px;
     }
 
     &__sidebar {
