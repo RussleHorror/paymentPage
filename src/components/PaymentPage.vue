@@ -13,12 +13,30 @@
       </div>
     </div>
 
+    <div class="payment-page__content">
+      <div class="payment-page__content-wrapper">
+        <h1 class="payment-page__content__title">
+          Заголовок страницы
+        </h1>
+        <div class="payment-page__content__sub-text">
+          Давно выяснено, что при оценке дизайна и
+          композиции читаемый текст мешает
+        </div>
+        <payment-form></payment-form>
+
+      </div>
+
+
+    </div>
 
   </div>
 </template>
 
 <script>
+  import PaymentForm from '@/components/PaymentForm'
+
   export default {
+    components: {PaymentForm},
     data: () => ({
       links: [
         {
@@ -91,34 +109,31 @@
           }
         }
       }
-
     }
+
+    &__content {
+      width: 60%;
+      background: white;
+      padding: 50px 0 0;
+      float: left;
+
+      &-wrapper {
+        padding: 0 30px;
+      }
+
+      &__title {
+        font-size: 28px;
+        font-weight: bold;
+        color: black;
+        margin-bottom: 7px;
+      }
+
+      &__sub-text {
+        color: #676666;
+        font-size: 13px;
+        margin-bottom: 22px;
+      }
+    }
+
   }
-
-  .logo {
-    margin: 60px;
-  }
-
-  /*менюшечка*/
-
-  .navMenu {
-    max-width: 320px;
-    background: #191C24;
-  }
-
-  .navMenu ul {
-    list-style-type: none;
-    padding-left: 33px;
-    padding-top: 40px;
-    margin: 0;
-  }
-
-  .navMenu li {
-    font-family: Open-Sans, serif;
-    font-size: 15px;
-    padding: 15px 0;
-    color: white;
-  }
-
-  /*формочка*/
 </style>
