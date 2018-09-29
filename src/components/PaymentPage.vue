@@ -71,7 +71,8 @@
   .payment-page {
     width: 700px;
     margin: 0 auto;
-    border: 1px solid white;
+    /*border: 1px solid white;*/
+    background: #191C24;
 
     &:after {
       content: '';
@@ -86,13 +87,14 @@
       &__logo {
         padding: 60px 0;
         text-align: center;
+        background: black;
+
         img {
           width: 100px;
         }
       }
 
       &__links-block {
-        background: #191C24;
         padding: 30px 0;
 
         &__item {
