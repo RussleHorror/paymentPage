@@ -207,6 +207,8 @@
       color: #1F2229;
       font-size: 13px;
       margin-bottom: 10px;
+      font-weight: bold;
+
     }
 
     &__input {
