@@ -9,7 +9,7 @@
         <div class="sidebar__links-block">
           <router-link v-for="link in links" :to="link.to"
                        class="sidebar__links-block__item"
-                       :class="{'payment-page__sidebar__links-block__item_active': link.active}">
+                       :class="{'sidebar__links-block__item_active': link.active}">
             {{link.label}}
           </router-link>
         </div>
