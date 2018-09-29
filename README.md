@@ -1,5 +1,3 @@
-# pay_form
-
 > A Vue.js project
 
 ## Build Setup
